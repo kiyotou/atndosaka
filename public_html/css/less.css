@@ -87,9 +87,12 @@ px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
 	padding: 72px 48px 84px;
-	background: rgb(232,232,232);
+	background: rgb(232,232,222);
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+a {
+	color: #F31;
 }
 
 .wrapper {
@@ -102,14 +105,35 @@ aside {
 	width: 252px;
 }
 article {
-	width: 620px;
+  border: 1px solid #CCC;
+  border-radius: 6px;
+  background-color: #FFF;
+  padding: 15px;
+  margin-bottom: 20px;
 }
-article .maps {
-	width:100%;
-	height:500px;
+article h2 {
+  float:left;
+  width: 700px;
+}
+article .evCatch {
+  clear:both;
+  width: 700px;
+}
+article .evCount {
+  float:right;
+  width: 100px;
 }
 #footer-container {
 	clear:both;
+}
+#srch {
+  border: 1px solid #CCC;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+#srch input {
+  font-size: x-large;
 }
 
 
@@ -135,7 +159,6 @@ px      68    160    252    344    436    528    620    712    */
 		width: 160px;
 	}
 	article {
-		width: 528px;
 	}
 	
 }
@@ -164,7 +187,6 @@ px      68    160    252    */
 		width:100%;
 	}
 	article {
-		width:100%;
 	}
 	article .maps {
 		height:300px;
@@ -197,7 +219,6 @@ px      68    160    252    344    436    */
 		width:100%;
 	}
 	article {
-		width:100%;
 	}
 	article .maps {
 		height:400px;
