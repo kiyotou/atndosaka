@@ -115,13 +115,13 @@ article h2 {
   float:left;
   width: 700px;
 }
-article .evCatch {
-  clear:both;
-  width: 700px;
-}
 article .evCount {
   float:right;
   width: 100px;
+}
+article .evCatch {
+  clear:both;
+  width: 700px;
 }
 #footer-container {
 	clear:both;
