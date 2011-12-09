@@ -93,6 +93,7 @@ body {
 }
 a {
 	color: #F31;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -111,18 +112,34 @@ article {
   padding: 15px;
   margin-bottom: 20px;
 }
+article .evDate {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
 article h2 {
   float:left;
   width: 700px;
+  font-size: 36px;
 }
 article .evCount {
   float:right;
   width: 100px;
+  font-size: 20px;
+}
+article .evCount .evAccepted {
+  font-size: 36px;
 }
 article .evCatch {
   clear:both;
   width: 700px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
+article .evPlace {
+  font-size: 16px;
+}
+
+
 #footer-container {
 	clear:both;
 }
