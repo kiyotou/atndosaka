@@ -2,9 +2,7 @@ $(function(){
 
 	$("#btnSrch").click(function(){
 	
-		alert($("#txtSrch").val());
-
-/*
+		var keywords = $("#txtSrch").val();
 
 		$.getJSON(
 			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&callback=?",
@@ -21,8 +19,6 @@ $(function(){
 			}
 			
 		});
-
-*/
 		
 	});	
 
