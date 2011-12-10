@@ -13,7 +13,7 @@ $(function(){
 			
 				$.each(data.event, function(i, item){
 				
-					var tw_id =item.title;
+					alert(item.title);
 					
 				});
 			}
