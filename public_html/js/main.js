@@ -9,10 +9,10 @@ $(function(){
 			null,
 			function(data, status){
 			
-				alert(data.results_returned);
+				alert(data);
 			
 				$.each(data.event, function(i, item){
-				
+					
 					alert(item.title);
 					
 				});
