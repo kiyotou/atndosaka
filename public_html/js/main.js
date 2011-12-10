@@ -1,18 +1,29 @@
-function initialize() {
+$(function(){
 
-	// set Google Map 
-	var latlng = new google.maps.LatLng(34.6718, 135.497841);
-	var myOptions = {
-	  zoom: 15,
-	  center: latlng,
-	  mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-	var map = new google.maps.Map(document.getElementById("map"), myOptions);
+	$("#btnSrch").click(funciton(){
+	
+		alert($(this).val());
 
-}
+/*
 
+		$.getJSON(
+			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&callback=?",
+			null,
+			function(data, status){
+			
+				alert(data.results_returned);
+			
+				$.each(data.event, function(i, item){
+				
+					var tw_id =item.title;
+					
+				});
+			}
+			
+		});
+		
+	});
+	
+*/
 
-
-
-
-
+});
