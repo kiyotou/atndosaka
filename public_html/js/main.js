@@ -9,9 +9,7 @@ $(function(){
 			null,
 			function(data, status){
 			
-				alert(data);
-			
-				$.each(data.event, function(i, item){
+				$.each(data.events, function(i, item){
 					
 					alert(item.title);
 					
