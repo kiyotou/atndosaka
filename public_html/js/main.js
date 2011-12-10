@@ -2,7 +2,7 @@ $(function(){
 
 	$("#btnSrch").click(function(){
 	
-		alert($(this).val());
+		alert($("#txtSrch").val());
 
 /*
 
@@ -21,9 +21,9 @@ $(function(){
 			}
 			
 		});
-		
-	});
-	
+
 */
+		
+	});	
 
 });
