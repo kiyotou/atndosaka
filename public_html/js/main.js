@@ -1,6 +1,6 @@
 $(function(){
 
-	$("#btnSrch").click(funciton(){
+	$("#btnSrch").click(function(){
 	
 		alert($(this).val());
 
