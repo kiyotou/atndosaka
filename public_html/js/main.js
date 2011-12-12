@@ -1,12 +1,21 @@
 $(function(){
 
 	// initial
-	srchAtnd("大阪");
+	srchAtnd("大阪");	
 
 	$("#btnSrch").click(function(){
 	
-		var keywords = "大阪 " + $("#txtSrch").val();
+		var keywords;
+		var keyword = $("#txtSrch").val();
+		var arrWords = keyword.split(" ");
+		$.each(arrWords, function(i, v){
+			if(v.length > 0){
+				keywords += ","+v;
+			}
+		});
+		keywords = "大阪"+keywords;
 		
+		console.log(keywords);
 		srchAtnd(keywords);
 		
 	});
