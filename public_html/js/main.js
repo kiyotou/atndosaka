@@ -5,7 +5,7 @@ $(function(){
 
 	$("#btnSrch").click(function(){
 	
-		var keywords;
+		var keywords = "";
 		var keyword = $("#txtSrch").val();
 		var arrWords = keyword.split(" ");
 		$.each(arrWords, function(i, v){
