@@ -87,7 +87,7 @@ px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
 	padding: 72px 48px 84px;
-	background: rgb(232,232,222);
+	background: #FCFCE0;
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
@@ -101,9 +101,15 @@ a {
 	margin:0 auto;
 	position:relative;
 }
-aside {
+
+h1 {
+	width: 500px;
+	float:left;
+}
+#produce {
+	width: 200px;
 	float:right;
-	width: 252px;
+	text-align:right;
 }
 article {
   border: 1px solid #CCC;
@@ -144,10 +150,20 @@ article .evPlace {
 	clear:both;
 }
 #srch {
+	clear:both;
   border: 1px solid #CCC;
   padding: 20px;
   border-radius: 6px;
   margin-bottom: 40px;
+}
+#srch #srchBox {
+	width: 500px;
+	text-align:right;
+	float:left;
+}
+#srch #srchDetail {
+	width: 300px;
+	float:left;
 }
 #srch input {
   font-size: x-large;

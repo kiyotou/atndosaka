@@ -1,11 +1,20 @@
 $(function(){
 
+	// initial
+	srchAtnd("大阪");
+
 	$("#btnSrch").click(function(){
 	
-		var keywords = $("#txtSrch").val();
+		var keywords = "大阪 " + $("#txtSrch").val();
+		
+		srchAtnd(keywords);
+		
+	});
+	
+	function srchAtnd(keywords){
 
 		$.getJSON(
-			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&callback=?",
+			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&count=20&callback=?",
 			null,
 			function(data, status){
 			
@@ -35,6 +44,6 @@ $(function(){
 			
 		);
 		
-	});	
+	}
 
 });
