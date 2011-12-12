@@ -8,6 +8,7 @@ $(function(){
 		var keywords;
 		var keyword = $("#txtSrch").val();
 		var arrWords = keyword.split(" ");
+		console.log(arrWords[0]);
 		$.each(arrWords, function(i, v){
 			if(v.length > 0){
 				keywords += ","+v;
@@ -15,7 +16,6 @@ $(function(){
 		});
 		keywords = "大阪"+keywords;
 		
-		console.log(keywords);
 		srchAtnd(keywords);
 		
 	});
