@@ -128,9 +128,10 @@ article h2 {
   font-size: 36px;
 }
 article .evCount {
-  float:right;
-  width: 100px;
-  font-size: 20px;
+	float:right;
+	width: 150px;
+	font-size: 20px;
+	text-align:right;
 }
 article .evCount .evAccepted {
   font-size: 36px;
