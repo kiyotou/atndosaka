@@ -151,15 +151,10 @@ article .evPlace {
 }
 #srch {
 	clear:both;
-	border: 1px solid #CCC;
-	background: #CCC;
-	padding: 20px;
-	border-radius: 6px;
 	margin-bottom: 40px;
-	height: 40px;
 }
 #srch #srchBox {
-	width: 500px;
+	width: 600px;
 	text-align:right;
 	float:left;
 }
@@ -176,9 +171,11 @@ article .evPlace {
 	-moz-border-radius: 4px;
 	-webkit-box-shadow: 0 1px 1px #DDD;
 	-moz-box-shadow: 0 1px 0 #DDD;
+	width: 320px;
 }
 #srch #srchBox #btnSrch {
-	font-size: 14px;
+	vertical-align: top;
+	font-size: 17px;
 	color: #ffffff;
 	padding: 10px 20px;
 	background: -moz-linear-gradient(
