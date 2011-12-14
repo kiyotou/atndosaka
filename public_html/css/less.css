@@ -103,8 +103,7 @@ a {
 }
 
 h1 {
-	width: 500px;
-	float:left;
+	text-align: center;
 }
 #produce {
 	width: 200px;
@@ -179,13 +178,30 @@ article .evPlace {
 	-moz-box-shadow: 0 1px 0 #DDD;
 }
 #srch #srchBox #btnSrch {
-	border: 1px solid #333;
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size: medium;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#f9ff42 0%,
+		#664100);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#f9ff42),
+		to(#664100));
 	border-radius: 4px;
-	background: -moz-linear-gradient(top,#FFF 0%,#EEE);
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #660000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
 }
 
 #srch #srchDetail {
