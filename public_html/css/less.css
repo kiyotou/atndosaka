@@ -154,7 +154,7 @@ article .evPlace {
 	margin-bottom: 40px;
 }
 #srch #srchBox {
-	width: 600px;
+	width: 550px;
 	text-align:right;
 	float:left;
 }
@@ -210,6 +210,9 @@ article .evPlace {
   font-size: x-large;
 }
 
+#evs {
+	clear: both;
+}
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
