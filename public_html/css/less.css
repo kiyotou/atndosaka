@@ -153,6 +153,7 @@ article .evPlace {
 #srch {
 	clear:both;
 	border: 1px solid #CCC;
+	background: #CCC;
 	padding: 20px;
 	border-radius: 6px;
 	margin-bottom: 40px;
@@ -163,14 +164,26 @@ article .evPlace {
 	text-align:right;
 	float:left;
 }
+#srch #srchBox #txtSrch {
+	border:1px solid #999;
+	padding: 6px;
+	color: #666;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+	background: -moz-linear-gradient(top, #eee, #fff);
+	filter:progid:DXImageTransform.Microsoft.gradient (startColorstr=#ffeeeeee,endColorstr=#ffffffff); zoom: 1;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px #DDD;
+	-moz-box-shadow: 0 1px 0 #DDD;
+}
 #srch #srchBox #btnSrch {
 	border: 1px solid #333;
-	height: 38px;
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: medium;
 	border-radius: 4px;
-	vertical-align: bottom;
 	background: -moz-linear-gradient(top,#FFF 0%,#EEE);
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
 }
