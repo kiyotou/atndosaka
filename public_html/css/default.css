@@ -59,7 +59,8 @@ a img {border: 0;}
 }
 
 body {
-	font: 16px/24px Georgia, serif;
+	font-size: 16px;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 }
 
 .small, small {
@@ -93,8 +94,8 @@ body {
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 a {
-	color: #F31;
-  text-decoration: none;
+	color:#FF7766;
+	text-decoration: none;
 }
 
 .wrapper {
