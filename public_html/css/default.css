@@ -60,7 +60,6 @@ a img {border: 0;}
 
 body {
 	font: 16px/24px Georgia, serif;
-	background-image: url(./img/stripe.png);
 }
 
 .small, small {
@@ -89,6 +88,7 @@ px      68    160    252    344    436    528    620    712    804    896    */
 body {
 	padding: 72px 48px 84px;
 	background: #FCFCE0;
+	background-image: url(./img/stripe.png);
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
