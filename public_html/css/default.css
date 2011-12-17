@@ -60,6 +60,7 @@ a img {border: 0;}
 
 body {
 	font: 16px/24px Georgia, serif;
+	background-image: url(./img/stripe.png);
 }
 
 .small, small {
