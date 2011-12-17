@@ -1,0 +1,60 @@
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		padding: 48px 34px 60px;
+	}
+
+	.wrapper {
+		width: 252px;
+	}
+	aside {
+		float:none;
+		width:100%;
+	}
+	article {
+	}
+	article .maps {
+		height:300px;
+	}
+	
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		padding: 36px 22px 48px;
+	}
+
+	.wrapper {
+		width: 436px;
+	}
+	aside {
+		float:none;
+		width:100%;
+	}
+	article {
+	}
+	article .maps {
+		height:400px;
+	}
+	
+}
