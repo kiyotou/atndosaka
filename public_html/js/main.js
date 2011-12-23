@@ -20,7 +20,9 @@ $(function(){
 		
 	});
 
-	$('#calendar').fullCalendar();
+	$('#calendar').fullCalendar({
+		weekends:false;
+	});
 	
 	function srchAtnd(keywords){
 
