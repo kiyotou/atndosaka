@@ -21,7 +21,7 @@ $(function(){
 	});
 
 	$('#calendar').fullCalendar({
-		weekends:false;
+		weekends:false
 	});
 	
 	function srchAtnd(keywords){
