@@ -19,6 +19,8 @@ $(function(){
 		srchAtnd(keywords);
 		
 	});
+
+	$('#calendar').fullCalendar();
 	
 	function srchAtnd(keywords){
 
