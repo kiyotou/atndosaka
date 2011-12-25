@@ -21,7 +21,16 @@ $(function(){
 	});
 
 	$('#calendar').fullCalendar({
-		weekends:false
+		events: [
+			{
+				title: 'イベント１',
+				start: '2011-12-26'
+			},
+			{
+				title: 'イベント2',
+				start: '2011-12-31'
+			}
+		]
 	});
 	
 	function srchAtnd(keywords){
