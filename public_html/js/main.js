@@ -28,7 +28,13 @@ $(function(){
 			console.log('start:'+start);
 			console.log('end:'+end);
 			
-			var ym = ''+start.getFullYear()+start.getMonth();
+			var y = start.getFullYear();
+			var m = start.getMonth()+1;
+			if(m >= 12) {
+				ym = ''+y+(('0'+m).slice(-2))+','+(y+1)+'01';
+			} else {
+				ym = ''+y+(('0'+m).slice(-2))+','+y+(('0'+(m+1)).slice(-2));
+			}
 			console.log("ym:"+ym);
 
 			$.getJSON(
