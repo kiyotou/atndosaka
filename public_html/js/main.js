@@ -4,7 +4,20 @@ $(function(){
 
 	// initial
 	srchAtnd(keywords);
+	$("#calendar").hide();
+	
+	// switch
+	$("#switch ul li").click(function(){
+		if($(this).text() == "リスト"){
+			$("#evs").show();
+			$("#calendar").hide();
+		} else if($(this).text() == "カレンダー"){
+			$("#evs").hide();
+			$("#calendar").show();
+		}
+	});
 
+	// search keywords
 	$("#btnSrch").click(function(){
 	
 		var keyword = $("#txtSrch").val();

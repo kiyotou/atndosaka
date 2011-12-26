@@ -157,6 +157,7 @@ article .evPlace {
 #footer-container {
 	clear:both;
 }
+
 #srch {
 	clear:both;
 	height: 46px;
@@ -229,6 +230,51 @@ article .evPlace {
 }
 #srch input {
   font-size: x-large;
+}
+
+#switch {
+  height: 40px;
+  margin-bottom: 20px;
+}
+#switch ul {
+  width: 306px;
+  margin: 0 auto;
+}
+#switch ul li {
+	cursor: pointer;
+	display:block;
+	width: 100px;
+	float:left;
+	text-align:center;
+	padding: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#b4a3a3 0%,
+		#4c3b3b 50%,
+		#352424 50%,
+		#110000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#b4a3a3),
+		color-stop(0.50, #4c3b3b),
+		color-stop(0.50, #352424),
+		to(#110000));
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border: 1px solid #000000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,1),
+		0px 1px 0px rgba(255,255,255,0.2);  
 }
 
 #evs {
