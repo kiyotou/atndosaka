@@ -36,6 +36,9 @@ $(function(){
 		
 		srchAtnd(keywords);
 		
+		$('#calendar').fullCalendar('render');
+
+		
 	});
 
 	// generate calendar
