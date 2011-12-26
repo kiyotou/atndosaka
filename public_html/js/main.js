@@ -4,7 +4,6 @@ $(function(){
 
 	// initial
 	srchAtnd(keywords);
-	$("#calendar").hide();
 	
 	// switch
 	$("#switch ul li").click(function(){
@@ -36,6 +35,11 @@ $(function(){
 
 	// generate calendar
 	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,basicWeek,basicDay'
+		},
 		events: function(start, end, callback) {
 			
 			console.log('start:'+start);
@@ -108,5 +112,7 @@ $(function(){
 		);
 		
 	}
+
+	$("#calendar").hide();
 
 });

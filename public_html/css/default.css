@@ -99,7 +99,6 @@ a {
 }
 
 .wrapper {
-	width: 896px;
 	margin:0 auto;
 	position:relative;
 }
@@ -233,7 +232,7 @@ article .evPlace {
 }
 
 #switch {
-  height: 40px;
+  height: 46px;
   margin-bottom: 20px;
 }
 #switch ul {
@@ -243,6 +242,7 @@ article .evPlace {
 #switch ul li {
 	cursor: pointer;
 	display:block;
+	margin-right: 6px;
 	width: 100px;
 	float:left;
 	text-align:center;
