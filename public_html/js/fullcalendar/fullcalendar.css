@@ -280,9 +280,12 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #FA0;     /* default BORDER color */
-	background-color: #F90  /* default BACKGROUND color */
-	color: #FFF;            /* default TEXT color */
+	border-color: #BBB;     /* default BORDER color */
+	color: #954;            /* default TEXT color */
+	background: #FFF;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE');
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE));
+	background: -moz-linear-gradient(top,  #FFFFFF,  #EEEEEE);
 	}
 	
 .fc-event-inner {
