@@ -1,11 +1,12 @@
 $(function(){
 
+	var keywords = "大阪";
+
 	// initial
-	srchAtnd("大阪");	
+	srchAtnd(keywords);
 
 	$("#btnSrch").click(function(){
 	
-		var keywords = "";
 		var keyword = $("#txtSrch").val();
 		var arrWords = keyword.split(" ");
 		$.each(arrWords, function(i, v){
@@ -20,18 +21,38 @@ $(function(){
 		
 	});
 
+	// generate calendar
 	$('#calendar').fullCalendar({
-		events: [
-			{
-				title: 'イベント１',
-				start: '2011-12-26'
-			},
-			{
-				title: 'イベント2',
-				start: '2011-12-31'
-			}
-		]
-	});
+		events: function(start, end, callback) {
+			
+			console.log('start:'+start);
+			console.log('end:'+end);
+			
+			var ym = "201112";
+
+			$.getJSON(
+				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&callback=?",
+				null,
+				function(data, status){
+				
+					var started_at;
+					var events = [];
+				
+					$.each(data.events, function(i, item){
+					
+	                    events.push({
+	                        title: item.title,
+	                        start: item.started_at
+	                    });
+					
+					});
+					
+					callback(events);
+					
+				}
+			)
+	    }
+    });
 	
 	function srchAtnd(keywords){
 
