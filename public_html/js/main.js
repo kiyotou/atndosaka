@@ -28,7 +28,7 @@ $(function(){
 			console.log('start:'+start);
 			console.log('end:'+end);
 			
-			var ym = start.getFullYear()+start.getMonth();
+			var ym = ''+start.getFullYear()+start.getMonth();
 			console.log("ym:"+ym);
 
 			$.getJSON(
