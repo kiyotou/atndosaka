@@ -1,23 +1,28 @@
 $(function(){
 
-	var keywords = "大阪";
+	var iniKey = "大阪";
+	
+	var keywords = iniKey;
 
 	// initial
 	srchAtnd(keywords);
 	
 	// switch
-	$("#switch ul li").click(function(){
+	$('#switch ul li').click(function(){
 		if($(this).text() == "リスト"){
-			$("#evs").show();
-			$("#calendar").hide();
+			$('#evs').show();
+			$('#calendar').hide();
 		} else if($(this).text() == "カレンダー"){
-			$("#evs").hide();
-			$("#calendar").show();
+			$('#evs').hide();
+			$('#calendar').show();
+			$('#calendar').fullCalendar('render');
 		}
 	});
 
 	// search keywords
 	$("#btnSrch").click(function(){
+	
+		keywords = "";
 	
 		var keyword = $("#txtSrch").val();
 		var arrWords = keyword.split(" ");
@@ -27,7 +32,7 @@ $(function(){
 			}
 		});
 		console.log(keywords);
-		keywords = "大阪"+keywords;
+		keywords = iniKey+keywords;
 		
 		srchAtnd(keywords);
 		
@@ -40,6 +45,7 @@ $(function(){
 			center: 'title',
 			right: 'month,basicWeek,basicDay'
 		},
+		eventBackgroundColor: "#F60",
 		events: function(start, end, callback) {
 			
 			console.log('start:'+start);
@@ -55,7 +61,7 @@ $(function(){
 			console.log("ym:"+ym);
 
 			$.getJSON(
-				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=50&callback=?",
+				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=100&callback=?",
 				null,
 				function(data, status){
 				
