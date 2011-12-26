@@ -281,7 +281,7 @@ a.fc-event {
 	
 .fc-event-skin {
 	border-color: #BBB;     /* default BORDER color */
-	color: #954;            /* default TEXT color */
+	color: #FF7766;            /* default TEXT color */
 	background: #FFF;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE');
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE));
