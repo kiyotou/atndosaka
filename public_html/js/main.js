@@ -45,7 +45,6 @@ $(function(){
 			center: 'title',
 			right: 'month,basicWeek,basicDay'
 		},
-		eventBackgroundColor: "#F60",
 		events: function(start, end, callback) {
 			
 			console.log('start:'+start);
@@ -72,7 +71,8 @@ $(function(){
 					
 	                    events.push({
 	                        title: item.title,
-	                        start: item.started_at
+	                        start: item.started_at,
+	                        url:   item.event_url
 	                    });
 					
 					});

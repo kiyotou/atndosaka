@@ -125,6 +125,7 @@ html .fc,
 .fc-widget-header,    /* <th>, usually */
 .fc-widget-content {  /* <td>, usually */
 	border: 1px solid #ccc;
+	background: #fff;
 	}
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
@@ -279,9 +280,9 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #36c;     /* default BORDER color */
-	background-color: #36c; /* default BACKGROUND color */
-	color: #fff;            /* default TEXT color */
+	border-color: #FA0;     /* default BORDER color */
+	background-color: #F90  /* default BACKGROUND color */
+	color: #FFF;            /* default TEXT color */
 	}
 	
 .fc-event-inner {
