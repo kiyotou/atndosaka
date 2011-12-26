@@ -38,7 +38,7 @@ $(function(){
 			console.log("ym:"+ym);
 
 			$.getJSON(
-				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&callback=?",
+				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=50&callback=?",
 				null,
 				function(data, status){
 				
