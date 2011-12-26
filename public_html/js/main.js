@@ -9,6 +9,8 @@ $(function(){
 	
 	// switch
 	$('#switch ul li').click(function(){
+		$('#switch ul li').removeClass("select");
+		$(this).addClass("select");
 		if($(this).text() == "リスト"){
 			$('#evs').show();
 			$('#calendar').hide();

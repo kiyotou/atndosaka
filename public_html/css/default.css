@@ -252,16 +252,12 @@ article .evPlace {
 	padding: 10px 20px;
 	background: -moz-linear-gradient(
 		top,
-		#b4a3a3 0%,
-		#4c3b3b 50%,
-		#352424 50%,
-		#110000);
+		#D4a3a3,
+		#665555);
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
-		from(#b4a3a3),
-		color-stop(0.50, #4c3b3b),
-		color-stop(0.50, #352424),
-		to(#110000));
+		from(#D4a3a3),
+		to(#665555));
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -275,6 +271,16 @@ article .evPlace {
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,1),
 		0px 1px 0px rgba(255,255,255,0.2);  
+}
+#switch ul li.select {
+	background: -moz-linear-gradient(
+		top,
+		#b4a3a3,
+		#110000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#b4a3a3),
+		to(#110000));
 }
 
 #evs {
