@@ -28,7 +28,8 @@ $(function(){
 			console.log('start:'+start);
 			console.log('end:'+end);
 			
-			var ym = "201112";
+			var ym = start.getFullYear()+start.getMonth();
+			console.log("ym:"+ym);
 
 			$.getJSON(
 				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&callback=?",
