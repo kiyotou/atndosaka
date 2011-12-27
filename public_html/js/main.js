@@ -7,7 +7,7 @@ $(function(){
 	// initial
 	$("#calendar").hide();
 	srchAtnd(keywords);
-	showCalEvents();
+	//showCalEvents();
 	
 	// switch
 	$('#switch ul li').click(function(){
@@ -19,7 +19,7 @@ $(function(){
 		} else if($(this).text() == "カレンダー"){
 			$('#evs').hide();
 			$('#calendar').show();
-			$('#calendar').fullCalendar('render');
+			showCalEvents();
 		}
 	});
 
