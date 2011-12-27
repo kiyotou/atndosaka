@@ -19,7 +19,6 @@ $(function(){
 			$('#evs').hide();
 			$('#calendar').show();
 			$('#calendar').fullCalendar('render');
-			$('#calendar').fullCalendar('removeEvents');
 			showCalEvents();
 		}
 	});
@@ -41,7 +40,6 @@ $(function(){
 		
 		srchAtnd(keywords);
 		
-		$('#calendar').fullCalendar('removeEvents');
 		showCalEvents();
 		
 	});
@@ -57,6 +55,8 @@ $(function(){
     
     // show events on calendar 
     function showCalEvents(){
+
+		$('#calendar').fullCalendar('removeEvents');
 
 		$('#calendar').fullCalendar('addEventSource', function(start, end, callback) {
 			
