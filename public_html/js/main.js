@@ -5,7 +5,6 @@ $(function(){
 	var keywords = iniKey;
 
 	// initial
-	showCalEvents();
 	$("#calendar").hide();
 	srchAtnd(keywords);
 	
@@ -20,7 +19,7 @@ $(function(){
 			$('#evs').hide();
 			$('#calendar').show();
 			$('#calendar').fullCalendar('render');
-			//showCalEvents();
+			showCalEvents();
 		}
 	});
 
