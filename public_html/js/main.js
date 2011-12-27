@@ -5,9 +5,9 @@ $(function(){
 	var keywords = iniKey;
 
 	// initial
+	showCalEvents();
 	$("#calendar").hide();
 	srchAtnd(keywords);
-	showCalEvents();
 	
 	// switch
 	$('#switch ul li').click(function(){
