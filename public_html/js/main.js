@@ -19,6 +19,7 @@ $(function(){
 			$('#evs').hide();
 			$('#calendar').show();
 			$('#calendar').fullCalendar('render');
+			$('#calendar').fullCalendar('removeEvents');
 			showCalEvents();
 		}
 	});
