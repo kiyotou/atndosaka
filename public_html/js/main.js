@@ -5,6 +5,7 @@ $(function(){
 	var keywords = iniKey;
 
 	// initial
+	$("#calendar").hide();
 	srchAtnd(keywords);
 	
 	// switch
@@ -50,44 +51,43 @@ $(function(){
 			center: 'title',
 			right: 'month,basicWeek,basicDay'
 		},
-		events: function(start, end, callback) {
-			
-			console.log('start:'+start);
-			console.log('end:'+end);
-			
-			var y = start.getFullYear();
-			var m = start.getMonth()+1;
-			if(m >= 12) {
-				ym = ''+y+(('0'+m).slice(-2))+','+(y+1)+'01';
-			} else {
-				ym = ''+y+(('0'+m).slice(-2))+','+y+(('0'+(m+1)).slice(-2));
-			}
-			console.log("ym:"+ym);
-
-			$.getJSON(
-				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=100&callback=?",
-				null,
-				function(data, status){
-				
-					var started_at;
-					var events = [];
-				
-					$.each(data.events, function(i, item){
-					
-	                    events.push({
-	                        title: item.title,
-	                        start: item.started_at,
-	                        url:   item.event_url
-	                    });
-					
-					});
-					
-					callback(events);
-					
-				}
-			)
-	    }
+		events: renderEvents(start, end, callback)
     });
+    
+    function renderEvents(start, end, callback){
+    
+		var y = start.getFullYear();
+		var m = start.getMonth()+1;
+		if(m >= 12) {
+			ym = ''+y+(('0'+m).slice(-2))+','+(y+1)+'01';
+		} else {
+			ym = ''+y+(('0'+m).slice(-2))+','+y+(('0'+(m+1)).slice(-2));
+		}
+
+		$.getJSON(
+			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=100&callback=?",
+			null,
+			function(data, status){
+			
+				var started_at;
+				var events = [];
+			
+				$.each(data.events, function(i, item){
+				
+                    events.push({
+                        title: item.title,
+                        start: item.started_at,
+                        url:   item.event_url
+                    });
+				
+				});
+				
+				callback(events);
+				
+			}
+		)
+    	
+    }
 	
 	function srchAtnd(keywords){
 
@@ -123,7 +123,5 @@ $(function(){
 		);
 		
 	}
-
-	$("#calendar").hide();
 
 });
