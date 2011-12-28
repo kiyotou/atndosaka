@@ -185,7 +185,7 @@ article .evPlace {
 	-moz-box-shadow: 0 1px 0 #DDD;
 	width: 320px;
 }
-#srch #srchBox #btnSrch {
+#srch #btnSrch {
 	vertical-align: top;
 	font-size: 17px;
 	color: #ffffff;
@@ -211,6 +211,12 @@ article .evPlace {
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,0.7),
 		0px 1px 0px rgba(255,255,255,0.3);
+}
+#srch #loading {
+	display:none;
+	background: url("/img/loading.gif") no-repeat;
+	width: 32px;
+	height: 32px;
 }
 
 #srch #srchDetail {

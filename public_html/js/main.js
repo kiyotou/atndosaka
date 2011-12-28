@@ -88,6 +88,9 @@ $(function(){
     }
     
 	function srchAtnd(){
+	
+		$("#btnSrch").hide();
+		$("#loading").show();
 		
 		// 検索キーをAPI用に変換
 		keywords = "";
@@ -129,6 +132,10 @@ $(function(){
 					$("#evs").html(html);
 					
 				});
+				
+				$("#btnSrch").show();
+				$("#loading").hide();
+				
 			}
 			
 		);
