@@ -2,11 +2,9 @@ $(function(){
 
 	var iniKey = "大阪";
 	
-	var keywords = iniKey;
-
 	// initial
 	$("#calendar").hide();
-	srchAtnd(keywords);
+	srchAtnd();
 	
 	// switch
 	$('#switch ul li').click(function(){
@@ -26,22 +24,17 @@ $(function(){
 	// search keywords
 	$("#btnSrch").click(function(){
 	
-		keywords = "";
-	
-		var keyword = $("#txtSrch").val();
-		var arrWords = keyword.split(" ");
-		$.each(arrWords, function(i, v){
-			if(v.length > 0){
-				keywords += ","+v;
-			}
-		});
-		console.log(keywords);
-		keywords = iniKey+keywords;
-		
-		srchAtnd(keywords);
+		srchAtnd();
 		
 		showCalEvents();
 		
+	});
+	
+	// enter search
+	$("#txtSrch").keydown(function(e){
+		if(e.keyCode == 13){
+			srchAtnd();
+		}
 	});
 
 	// generate calendar
@@ -94,8 +87,21 @@ $(function(){
 
     }
     
-	function srchAtnd(keywords){
-
+	function srchAtnd(){
+		
+		// 検索キーをAPI用に変換
+		keywords = "";
+		var keyword = $("#txtSrch").val();
+		var arrWords = keyword.split(" ");
+		$.each(arrWords, function(i, v){
+			if(v.length > 0){
+				keywords += ","+v;
+			}
+		});
+		keywords = iniKey+keywords;
+		console.log("keyword: "+keywords);
+		
+		// APIコール
 		$.getJSON(
 			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&count=20&callback=?",
 			null,
