@@ -160,15 +160,16 @@ article .evPlace {
 #srch {
 	clear:both;
 	height: 46px;
-	width: 480px;
+	width: 490px;
 	margin-bottom: 40px;
 	margin-left:auto;
 	margin-right:auto;
 }
 #srch #srchBox {
 	float:left;
-	width: 430px;
+	width: 350px;
 	text-align:right;
+	margin-right: 5px;
 }
 #srch #srchBox #txtSrch {
 	border:1px solid #999;
@@ -184,6 +185,10 @@ article .evPlace {
 	-webkit-box-shadow: 0 1px 1px #DDD;
 	-moz-box-shadow: 0 1px 0 #DDD;
 	width: 320px;
+}
+#srch #srchBtn {
+	float:left;
+	width: 85px;
 }
 #srch #btnSrch {
 	vertical-align: top;
@@ -214,9 +219,11 @@ article .evPlace {
 }
 #srch #loading {
 	display:none;
-	background: url("/img/loading.gif") no-repeat;
-	width: 32px;
+	float:left;
+	background: url("/img/loading.gif") no-repeat center;
+	width: 85px;
 	height: 32px;
+	margin-top: 5px;
 }
 
 #srch #srchDetail {
