@@ -4,6 +4,7 @@ $(function(){
 	
 	// initial
 	$("#calendar").hide();
+	$("#txtSrch").focus();
 	srchAtnd();
 	
 	// switch
