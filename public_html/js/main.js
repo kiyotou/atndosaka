@@ -63,7 +63,6 @@ $(function(){
 	$("#btnSrch").click(function(){
 	
 		srchAtnd();
-		
 		showCalEvents();
 		
 	});
@@ -72,6 +71,7 @@ $(function(){
 	$("#txtSrch").keydown(function(e){
 		if(e.keyCode == 13){
 			srchAtnd();
+			showCalEvents();
 		}
 	});
 
