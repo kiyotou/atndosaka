@@ -1,6 +1,7 @@
 $(function(){
 
 	var iniKey = "大阪";
+	var calSource;
 	
 	// initial
 	$("#calendar").hide();
@@ -50,44 +51,44 @@ $(function(){
     // show events on calendar 
     function showCalEvents(){
 
-		$('#calendar').fullCalendar('removeEvents');
-
-		$('#calendar').fullCalendar({
+		$('#calendar').fullCalendar('removeEvents', calSource);
 		
-			events: function(start, end, callback) {
+		// ready source
+		calSource = function(start, end, callback) {
 			
-				var y = start.getFullYear();
-				var m = start.getMonth()+1;
-				if(m >= 12) {
-					ym = ''+y+(('0'+m).slice(-2))+','+(y+1)+'01';
-				} else {
-					ym = ''+y+(('0'+m).slice(-2))+','+y+(('0'+(m+1)).slice(-2));
-				}
-	
-				$.getJSON(
-					"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=100&callback=?",
-					null,
-					function(data, status){
-					
-						var started_at;
-						var events = [];
-					
-						$.each(data.events, function(i, item){
-						
-		                    events.push({
-		                        title: item.title,
-		                        start: item.started_at,
-		                        url:   item.event_url
-		                    });
-						
-						});
-						
-						callback(events);
-						
-					}
-				)
+			var y = start.getFullYear();
+			var m = start.getMonth()+1;
+			if(m >= 12) {
+				ym = ''+y+(('0'+m).slice(-2))+','+(y+1)+'01';
+			} else {
+				ym = ''+y+(('0'+m).slice(-2))+','+y+(('0'+(m+1)).slice(-2));
 			}
-	    });
+
+			$.getJSON(
+				"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&ym="+ym+"&count=100&callback=?",
+				null,
+				function(data, status){
+				
+					var started_at;
+					var events = [];
+				
+					$.each(data.events, function(i, item){
+					
+	                    events.push({
+	                        title: item.title,
+	                        start: item.started_at,
+	                        url:   item.event_url
+	                    });
+					
+					});
+					
+					callback(events);
+					
+				}
+			)
+	    }
+
+		$('#calendar').fullCalendar('addEventSource', calSource);
 
     }
     
