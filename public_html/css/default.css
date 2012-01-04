@@ -245,8 +245,9 @@ article .evPlace {
 }
 
 #switch {
-  height: 46px;
-  margin-bottom: 20px;
+	height: 42px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #110000;
 }
 #switch ul {
   width: 306px;
@@ -271,16 +272,9 @@ article .evPlace {
 		linear, left top, left bottom, 
 		from(#E4E4E4),
 		to(#AAAAAA));
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border: 1px solid #000000;
-	-moz-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 1px rgba(255,255,255,0.6);
-	-webkit-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 1px rgba(255,255,255,0.6);
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,1),
 		0px 1px 0px rgba(255,255,255,0.2);  
@@ -294,6 +288,9 @@ article .evPlace {
 		linear, left top, left bottom, 
 		from(#b4a3a3),
 		to(#110000));
+	border-top: 1px solid #110000;
+	border-left: 1px solid #110000;
+	border-right: 1px solid #110000;
 }
 
 #evs {

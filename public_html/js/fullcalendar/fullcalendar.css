@@ -61,7 +61,9 @@ html .fc,
 	
 .fc-header-title h2 {
 	margin-top: 0;
+	margin-bottom: 4px;
 	white-space: nowrap;
+	font-size: 30px;
 	}
 	
 .fc .fc-header-space {
