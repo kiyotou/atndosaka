@@ -43,6 +43,12 @@ $(function(){
 		)
     }
 
+	// description
+	$('#descBtn').toggle(function(){
+		$(this).prev().slideDown();
+	},function(){
+		$(this).prev().slideUp();
+	});
 	
 	// switch
 	$('#switch ul li').click(function(){

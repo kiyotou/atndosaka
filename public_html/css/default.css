@@ -114,6 +114,7 @@ header {
   right:0;
 }
 #descBox .descText {
+	display:none;
   background-color: #400;
   color: #FFF;
   padding: 10px;
