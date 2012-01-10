@@ -107,7 +107,7 @@ header {
 	padding-top: 72px;
 }
 #descBox {
-  width: 200px;
+  width: 240px;
   font-size: small;
   position: absolute;
   top:0;
@@ -133,6 +133,7 @@ header {
     -webkit-border-bottom-left-radius: 4px;  
     -moz-border-radius-bottomright: 4px;  
     -moz-border-radius-bottomleft: 4px;
+    cursor:pointer;
 }
 h1 {
 	text-align: center;
