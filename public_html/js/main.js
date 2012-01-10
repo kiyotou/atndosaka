@@ -44,7 +44,7 @@ $(function(){
     }
 
 	// description
-	$('#descBtn').toggle(function(){
+	$('#descBox .descBtn').toggle(function(){
 		$(this).prev().slideDown();
 	},function(){
 		$(this).prev().slideUp();
