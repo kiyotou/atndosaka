@@ -106,6 +106,17 @@ a {
 header {
 	padding-top: 72px;
 }
+#socialBox {
+	width: 500px;
+	position: absolute;
+	top: 0;
+	left:0;
+	padding: 10px;
+}
+#socialBox div {
+	float:left;
+	width: 120px;
+}
 #descBox {
   width: 240px;
   font-size: small;
