@@ -169,6 +169,12 @@ article {
 	background: -moz-linear-gradient(top,  #FFFFFF,  #F6F6F6);
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+article.past {
+	background: #DDDDDD;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#CCCCCC');
+	background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#CCCCCC));
+	background: -moz-linear-gradient(top,  #DDDDDD,  #CCCCCC);
+}
 article .evDate {
   font-size: 26px;
   margin-bottom: 5px;
