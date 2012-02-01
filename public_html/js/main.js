@@ -114,11 +114,10 @@ $(function(){
 			}
 		});
 		keywords = iniKey+keywords;
-		console.log("keyword: "+keywords);
 		
 		// APIコール
 		$.getJSON(
-			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&count=20&callback=?",
+			"http://api.atnd.org/events/?keyword="+keywords+"&format=jsonp&count=30&callback=?",
 			null,
 			function(data, status){
 			
@@ -132,8 +131,14 @@ $(function(){
 					started_time = started_at.split("T")[1];
 					started_time = started_time.split("+")[0];
 					started_time = started_time.substr(0, started_time.lastIndexOf(":"));
-					
-					html += '<article>';
+                    if(Date.parse(started_at) < Date.now()){
+                        var cls = "past";
+                    }
+                    if(cls){
+					    html += '<article class="'+cls+'">';
+                    } else {
+					    html += '<article>';
+                    }
 					html += '	<p class="evDate">'+started_date+' '+started_time+'</p>';
 					html += '	<h2 class="evTitle"><a href="'+item.event_url+'" target="_blank">'+item.title+'</a></h2>';
 					html += '	<p class="evCount"><span class="evAccepted">'+item.accepted+'</span>';
